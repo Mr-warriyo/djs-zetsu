@@ -59,3 +59,8 @@ welcome(client, {
   channelId: `922497844798181497`, // Channel Id where message will be sent
 })
 ```
+<h4> Live Image: </h4>
+<p> Channel: </p>
+<img src="images/WelcomeMessage_Channel" alt="CHANNEL" width="60px" height="60px" />
+<p> DM: </p>
+<img src="images/WelcomeMessage_DM" alt="DM" width="60px" height="60px" />
