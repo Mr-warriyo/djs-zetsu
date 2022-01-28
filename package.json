@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Mr-warriyo/djs-zetsu#readme",
   "dependencies": {
-    "discord.js": "^13.6.0"
+    "discord.js": "^13.6.0",
+    "djs-zetsu": "^0.5.0"
   }
 }
