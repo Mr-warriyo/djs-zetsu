@@ -2,17 +2,25 @@
 
 <p align="center"> Djs-zetsu is a npm made for discord.js users to make their work easier! Checkout the functions of this NPM to know more. </p>
 
+<hr />
+
 <h3 align="center"> Install </h3>
 
 ```js
 npm install djs-zetsu
 ```
 
+<hr />
+
 <h3 align="center"> Features </h3>
 
 <ul style="list-style: square">
 <li> <a href="#Welcome"> Welcome </a> </li>
 </ul>
+
+<hr />
+
+<h3 align="center"> Code Examples </h3>
 
 # Welcome
 ```js
