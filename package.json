@@ -1,0 +1,30 @@
+{
+  "name": "djs-zetsu",
+  "version": "0.5.0",
+  "description": "Djs-zetsu is a npm made for discord.js users to make there work easier! Checkout the functions of this NPM to know more. ",
+  "main": "zetsu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mr-warriyo/djs-zetsu.git"
+  },
+  "keywords": [
+    "djs",
+    "djs-zetsu",
+    "mr-warriyo",
+    "discordjs",
+    "discord",
+    "discord_bots"
+  ],
+  "author": "Akshansh Srivastava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mr-warriyo/djs-zetsu/issues"
+  },
+  "homepage": "https://github.com/Mr-warriyo/djs-zetsu#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
