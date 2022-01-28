@@ -15,7 +15,7 @@ npm install djs-zetsu
 <h3 align="center"> Features </h3>
 
 <ul style="list-style: square">
-<li> <a href="#Welcome"> Welcome </a> </li>
+<li> <a href="#Welcome"> Welcome </a> <a href="#Welcome-Live-Example"> (Image Example) </a> </li>
 </ul>
 
 <hr />
@@ -58,9 +58,16 @@ welcome(client, {
   message: `@MEMBER Just Hopped into the Server!`, // Message that will be sent in Channel
   channelId: `922497844798181497`, // Channel Id where message will be sent
 })
+
+/**
+* FLAGS: Yes! This Function comes with FLAGS
+* FLAGS are OPTIONAL
+* @MEMBER => Member who Joined
+* @GUILD => Name of Server in which Member Joined
+*/
 ```
-<h4> Live Image: </h4>
+# Welcome-Live-Example
 <p> Channel: </p>
-<img src="images/WelcomeExample_Channel.jpg" alt="CHANNEL" width="90%" height="30%" />
+<img src="images/WelcomeExample_Channel.jpg" alt="CHANNEL" width="100%" height="30%" />
 <p> DM: </p>
-<img src="images/WelcomeExample_DM.jpg" alt="DM" width="90%" height="30%" />
+<img src="images/WelcomeExample_DM.jpg" alt="DM" width="100%" height="30%" />
