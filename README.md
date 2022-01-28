@@ -16,6 +16,8 @@ npm install djs-zetsu
 
 <ul style="list-style: square">
 <li> <a href="#Welcome"> Welcome </a> <a href="#Welcome-Live-Example"> (Image Example) </a> </li>
+<li> <a href="#Leave"> Leave </a> <a href="#Leave-Live-Example"> (Image Example) </a> </li>
+
 </ul>
 
 <hr />
@@ -71,3 +73,41 @@ welcome(client, {
 <img src="images/WelcomeExample_Channel.jpg" alt="CHANNEL" width="100%" height="30%" />
 <p> DM: </p>
 <img src="images/WelcomeExample_DM.jpg" alt="DM" width="100%" height="30%" />
+
+<hr align="center" width="70%" />
+
+# Leave
+```js
+// Define Your DISCORDJS CLIENT & Import Important Things
+const { Intents, Client } = require("discord.js")
+const client = new Client({
+  intents: [
+    Intents.FLAGS.GUILDS,
+    Intents.FLAGS.GUILD_MEMBERS,
+    Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.DIRECT_MESSAGES,
+  ],
+  params: ["CHANNEL"],
+})
+
+// Import Welcome Func
+const { welcome } = require("djs-zetsu")
+
+// Use it
+leave(client, {
+  message: `@MEMBER Just left us!`, // Message that will be sent in Channel
+  channelId: `922497844798181497`, // Channel Id where message will be sent
+}) // Welcome func
+
+/**
+* FLAGS: Yes! This Function comes with FLAGS
+* FLAGS are OPTIONAL
+* @MEMBER => Member who Joined
+* @GUILD => Name of Server in which Member Joined
+*/
+```
+# Leave-Live-Example
+<p> Channel: </p>
+<img src="images/LeaveExample_Channel.jpg" alt="CHANNEL" width="100%" height="30%" />
+
+<hr align="center" width="70%" />
