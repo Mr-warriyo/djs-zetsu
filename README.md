@@ -97,13 +97,13 @@ const { welcome } = require("djs-zetsu")
 leave(client, {
   message: `@MEMBER Just left us!`, // Message that will be sent in Channel
   channelId: `922497844798181497`, // Channel Id where message will be sent
-}) // Welcome func
+}) // Leave func
 
 /**
 * FLAGS: Yes! This Function comes with FLAGS
 * FLAGS are OPTIONAL
-* @MEMBER => Member who Joined
-* @GUILD => Name of Server in which Member Joined
+* @MEMBER => Member who Left
+* @GUILD => Name of Server from which Member Left
 */
 ```
 # Leave-Live-Example
