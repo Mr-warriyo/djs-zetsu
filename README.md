@@ -61,6 +61,6 @@ welcome(client, {
 ```
 <h4> Live Image: </h4>
 <p> Channel: </p>
-<img src="images/WelcomeExample_Channel.jpg" alt="CHANNEL" width="60px" height="60px" />
+<img src="images/WelcomeExample_Channel.jpg" alt="CHANNEL" width="90%" height="30%" />
 <p> DM: </p>
-<img src="images/WelcomeExample_DM.jpg" alt="DM" width="60px" height="60px" />
+<img src="images/WelcomeExample_DM.jpg" alt="DM" width="90%" height="30%" />
