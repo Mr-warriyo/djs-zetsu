@@ -1,8 +1,7 @@
 /**
  * Send a Message to someone
- * either GuildMember#Channel(DM) 
- * or in a Guild#Channel
- * when they Join
+ * in a Guild#Channel
+ * when they Leave
 
  * @param {client} => Your Discordjs Client/Bot
  * @param {options} => Config Options
@@ -16,9 +15,9 @@ const { Intents } = require("discord.js")
 const DiscordJSVersion = require("discord.js").version.substring(0, 2)
 
 // For Checking Correct Intents & Params later in code:
-const reqInt = ["GUILDS", "GUILD_MEMBERS", "DIRECT_MESSAGES"]
+const reqInt = ["GUILDS", "GUILD_MEMBERS"]
 
-async function welcome(client, options) {
+async function leave(client, options) {
   // DiscordJS Version Check
   if (DiscordJSVersion !== "13") {
     throw new Error(
@@ -32,7 +31,7 @@ async function welcome(client, options) {
     for (abc = 0; abc < reqInt.length; abc++) {
       if (!intents.has(reqInt[abc])) {
         throw new Error(
-          `Welcome Message: You need ${reqInt[abc]} Intent in your Discord Client to use Welcome Function.`
+          `Leave Message: You need ${reqInt[abc]} Intent in your Discord Client to use Welcome Function.`
         )
       }
     }
@@ -43,7 +42,7 @@ async function welcome(client, options) {
   let t
   if (!params) {
     throw new Error(
-      `Welcome Message: You forgot to use CHANNEL PARAM in your Discord Client.`
+      `Leave Message: You forgot to use CHANNEL PARAM in your Discord Client.`
     )
   }
   for (xyz = 0; xyz < params.length; xyz++) {
@@ -54,20 +53,15 @@ async function welcome(client, options) {
 
   if (t <= 0) {
     throw new Error(
-      `Welcome Message: You forgot to use a PARAM [CHANNEL] in your discordjs Client.`
+      `Leave Message: You forgot to use a PARAM [CHANNEL] in your discordjs Client.`
     )
   }
 
   // The Real Game Starts!!!!!
 
   // Event Trigger
-  client.on("guildMemberAdd", async (member) => {
+  client.on("guildMemberRemove", async (member) => {
     // Set options
-    let DMmessage =
-      (options && options.DMmessage) ||
-      (options[member.guild.id] && options[member.guild.id].DMmessage) ||
-      null
-
     let ChannelMessage =
       (options && options.message) ||
       (options[member.guild.id] && options[member.guild.id].message) ||
@@ -83,14 +77,14 @@ async function welcome(client, options) {
       let channel = member.guild.channels.cache.get(ChannelId)
       if (!channel) {
         throw new Error(
-          `Welcome Message: Module was unable to find any channel with ID: ${ChannelId}.`
+          `Leave Message: Module was unable to find any channel with ID: ${ChannelId}.`
         )
       } else {
         if (channel.permissionsFor(client.user).has("SEND_MESSAGES")) {
           let msg = ChannelMessage
 
           // FLAGS
-          msg = msg.replace(`@MEMBER`, `${member}`)
+          msg = msg.replace(`@MEMBER`, `${member.user.tag}`)
           msg = msg.replace(`@GUILDNAME`, `${member.guild.name}`)
 
           channel.send({
@@ -98,27 +92,12 @@ async function welcome(client, options) {
           })
         } else {
           throw new Error(
-            `Welcome Message: Bot Lacks Permission to send Welcome Message in ${channel.name}`
+            `Leave Message: Bot Lacks Permission to send Welcome Message in ${channel.name}`
           )
         }
       }
     }
-
-    // Message is DM
-    if (DMmessage) {
-      let msg = DMmessage
-
-      // FLAGS
-      msg = msg.replace(`@MEMBER`, `${member}`)
-      msg = msg.replace(`@GUILD`, `${member.guild.name}`)
-
-      member.send({ content: msg }).catch((err) => {
-        console.error(
-          `Welcome Message: Some Error Occured while sending Welcome Message to ${member.user.tag}!`
-        )
-      })
-    }
   })
 }
 
-module.exports = welcome
+module.exports = leave

@@ -12,3 +12,4 @@
 
 // MISC Commands
 module.exports.welcome = require("./src/misc/welcome")
+module.exports.leave = require("./src/misc/leave")
