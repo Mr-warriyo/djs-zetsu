@@ -13,3 +13,6 @@
 // MISC Commands
 module.exports.welcome = require("./src/misc/welcome")
 module.exports.leave = require("./src/misc/leave")
+
+// GAME Commands
+module.exports.rps = require("./src/games/rps")

@@ -15,8 +15,9 @@ npm install djs-zetsu
 <h3 align="center"> Features </h3>
 
 <ul style="list-style: square">
-<li> <a href="#Welcome"> Welcome </a> <a href="#Welcome-Live-Example"> (Image Example) </a> </li>
-<li> <a href="#Leave"> Leave </a> <a href="#Leave-Live-Example"> (Image Example) </a> </li>
+<li> <a href="#Welcome"> Welcome </a> </li>
+<li> <a href="#Leave"> Leave </a> </li>
+<li> <a href="#RPS"> Rock Paper Scissors </a> </li>
 
 </ul>
 
@@ -68,13 +69,6 @@ welcome(client, {
 * @GUILD => Name of Server in which Member Joined
 */
 ```
-# Welcome-Live-Example
-<p> Channel: </p>
-<img src="images/WelcomeExample_Channel.jpg" alt="CHANNEL" width="100%" height="30%" />
-<p> DM: </p>
-<img src="images/WelcomeExample_DM.jpg" alt="DM" width="100%" height="30%" />
-
-<hr align="center" width="70%" />
 
 # Leave
 ```js
@@ -106,8 +100,14 @@ leave(client, {
 * @GUILD => Name of Server from which Member Left
 */
 ```
-# Leave-Live-Example
-<p> Channel: </p>
-<img src="images/LeaveExample_Channel.jpg" alt="CHANNEL" width="100%" height="30%" />
 
-<hr align="center" width="70%" />
+# RPS
+```js
+const { rps } = require("djs-zetsu")
+
+rps(interaction, { // Your Interaction
+    embedColor: "RANDOM", // hex code allowed
+})
+
+// In your Interaction, add a option with name opponent case-sensitive!
+```
