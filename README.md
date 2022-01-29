@@ -90,8 +90,8 @@ const client = new Client({
   params: ["CHANNEL"],
 })
 
-// Import Welcome Func
-const { welcome } = require("djs-zetsu")
+// Import Leave Func
+const { leave } = require("djs-zetsu")
 
 // Use it
 leave(client, {
