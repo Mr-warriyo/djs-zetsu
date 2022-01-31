@@ -109,5 +109,13 @@ rps(interaction, { // Your Interaction
     embedColor: "RANDOM", // hex code allowed
 })
 
-// In your Interaction, add a option with name opponent case-sensitive!
+/** NOTE:
+  * In the same interaction/slashCommand add a option
+  * with ->
+  * name: "opponent", 
+  * type: "USER", 
+  * required: true, 
+  * description: "Your Opponent of the Game"
+  * Name MUST be opponent in small letters!
+*/
 ```
