@@ -1,6 +1,6 @@
 {
   "name": "djs-zetsu",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Djs-zetsu is a npm made for discord.js users to make their work easier! Checkout the functions of this NPM to know more. ",
   "main": "zetsu.js",
   "scripts": {
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Mr-warriyo/djs-zetsu#readme",
   "dependencies": {
+    "@discordjs/node-pre-gyp": "^0.4.2",
     "discord.js": "^13.6.0",
     "djs-zetsu": "^1.5.1"
   }
